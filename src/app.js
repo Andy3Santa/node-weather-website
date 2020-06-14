@@ -22,6 +22,8 @@ const partialsPath= path.join(__dirname,'../templates/partials')
 
 
 const app= express()
+const port =process.env.PORT || 3000
+
 const weather = {temperature: 10,precipitation: 0.5}
 
 // set views
@@ -151,8 +153,8 @@ app.get('*',(req,res)=>{
 })
 
 
-app.listen(3000,()=>{
-    console.log('Server is up on port 3000')
+app.listen(port,()=>{
+    console.log('Server is up on port '+ port)
 })
 // domain app.com
 // app.com/help
