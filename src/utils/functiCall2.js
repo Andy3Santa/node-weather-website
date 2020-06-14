@@ -16,7 +16,8 @@ const forecast=(lat,long,callback)=>{
 
         }
         else{
-            callback(undefined,body.current.weather_descriptions[0] ,' It is currently ',body.current.temperature,' degrees but, there is ',body.current.precip,' chance of rain')//{
+            console.log(body.current.weather_descriptions)
+            callback(undefined,body.current.weather_descriptions[0] + ' It is currently '+body.current.temperature+' degrees but, there is '+body.current.precip+' chance of rain')//{
 
            
         }
